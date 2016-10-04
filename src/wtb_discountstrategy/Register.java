@@ -10,12 +10,15 @@ package wtb_discountstrategy;
  * @author wboyer
  */
 public class Register {
+    private Receipt receipt;
+    private Storage storage;
 
-    public final void startNewSale(String customerId) {
-        
+    public final void startNewSale(String customerId, Storage storage) {
+        receipt = new Receipt(customerId, storage);
+        this.storage = storage;
     }
 
-    public final void addProduct(String productId, int quantity) {
+    public final void addProduct(String productId, int quantity, Storage storage) {
         
     }
 
