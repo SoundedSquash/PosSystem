@@ -3,7 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package wtb_discountstrategy;
+package wtb_discountstrategy.Storage;
+
+import wtb_discountstrategy.Customer;
+import wtb_discountstrategy.Product;
 
 /**
  * @author wboyer

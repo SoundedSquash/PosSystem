@@ -5,6 +5,9 @@
  */
 package wtb_discountstrategy;
 
+import wtb_discountstrategy.Storage.Storage;
+import wtb_discountstrategy.Storage.InternalDatabase;
+
 /**
  *
  * @author wboyer

@@ -1,5 +1,7 @@
 package wtb_discountstrategy;
 
+import wtb_discountstrategy.DiscountStrategy.DiscountStrategy;
+
 /**
  * @author wboyer
  */

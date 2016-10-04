@@ -1,4 +1,4 @@
-package wtb_discountstrategy;
+package wtb_discountstrategy.DiscountStrategy;
 
 /**
  * @author wboyer
