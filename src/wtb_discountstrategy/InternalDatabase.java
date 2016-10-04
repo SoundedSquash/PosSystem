@@ -13,7 +13,7 @@ public class InternalDatabase implements Storage {
     private Product[] products = {
         new Product("P100", "Jeans", 4.99, new QuantityDiscount(0.30, 3)),
         new Product("P101", "Football", 9.99, new PercentDiscount(0.10)),
-        new Product("P101", "T.V.", 349.99, new PercentDiscount(0.25))
+        new Product("P102", "T.V.", 349.99, new PercentDiscount(0.25))
     };
     
     @Override

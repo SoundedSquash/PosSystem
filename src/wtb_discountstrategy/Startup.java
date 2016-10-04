@@ -21,9 +21,9 @@ public class Startup {
         
         //Customer #C100
         register.startNewSale("C100", storage);
-        register.addProduct("A100",2, storage);
-        register.addProduct("B101",1, storage);
-        register.addProduct("C103",3, storage);
+        register.addProduct("P100",2, storage);
+        register.addProduct("P101",1, storage);
+        register.addProduct("P102",3, storage);
         register.endSale();
     }
     

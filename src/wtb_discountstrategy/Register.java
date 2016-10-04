@@ -19,11 +19,11 @@ public class Register {
     }
 
     public final void addProduct(String productId, int quantity, Storage storage) {
-        
+        receipt.addProduct(productId, quantity, storage);
     }
 
     public final void endSale() {
-        
+        receipt.printReceipt();
     }
     
 }
