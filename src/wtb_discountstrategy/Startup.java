@@ -5,8 +5,9 @@
  */
 package wtb_discountstrategy;
 
-import wtb_discountstrategy.Storage.Storage;
-import wtb_discountstrategy.Storage.InternalDatabase;
+import wtb_discountstrategy.Input.*;
+import wtb_discountstrategy.Output.*;
+import wtb_discountstrategy.Storage.*;
 
 /**
  *
@@ -21,6 +22,8 @@ public class Startup {
         // TODO code application logic here
         Register register = new Register();
         Storage storage = new InternalDatabase();
+        Reader reader = new NoReader();
+        Writer writer = new ConsoleWriter();
         
         //Customer #C100
         register.startNewSale("C100", storage);
