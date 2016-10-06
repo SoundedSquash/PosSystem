@@ -16,6 +16,11 @@ public class Product {
         this.productName = productName;
         this.productPrice = productPrice;
         this.productId = productId;
+        this.discount = discount;
+    }
+
+    public DiscountStrategy getDiscount() {
+        return discount;
     }
 
     public String getProductName() {
