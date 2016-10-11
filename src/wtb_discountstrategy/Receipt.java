@@ -17,6 +17,9 @@ public class Receipt {
 
     public Receipt(String customerId, Storage storage) {
         customer = storage.findCustomerById(customerId);
+        if (customer == null){
+            customer = new Customer("N/A", "N/A", "N/A");
+        }
         lineItems = new LineItem[0];
     }
 
