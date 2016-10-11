@@ -13,7 +13,8 @@ import wtb_discountstrategy.Product;
  */
 public interface Storage {
 
-    public abstract Customer findCustomerById(String customerId);
-    public abstract Product findProductById(String productId);
-    
+    Customer findCustomerById(String customerId);
+
+    Product findProductById(String productId);
+
 }

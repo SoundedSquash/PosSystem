@@ -6,7 +6,6 @@
 package wtb_discountstrategy;
 
 /**
- *
  * @author wboyer
  */
 public class Customer {
@@ -15,32 +14,35 @@ public class Customer {
     private String customerId;
 
     public Customer(String customerId, String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.customerId = customerId;
+        setFirstName(firstName);
+        setLastName(lastName);
+        setCustomerId(customerId);
     }
-    
-    public String getFirstName() {
+
+    public final String getFirstName() {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
+    public final void setFirstName(String firstName) {
+        //Validate
         this.firstName = firstName;
     }
 
-    public String getLastName() {
+    public final String getLastName() {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
+    public final void setLastName(String lastName) {
+        //Validate
         this.lastName = lastName;
     }
 
-    public String getCustomerId() {
+    public final String getCustomerId() {
         return customerId;
     }
 
-    public void setCustomerId(String customerId) {
+    public final void setCustomerId(String customerId) {
+        //Validate
         this.customerId = customerId;
     }
 }

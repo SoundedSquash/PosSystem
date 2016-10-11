@@ -12,39 +12,46 @@ public class Product {
     private String productId;
     private DiscountStrategy discount;
 
-    public Product( String productId, String productName, double productPrice, DiscountStrategy discount) {
-        this.productName = productName;
-        this.productPrice = productPrice;
-        this.productId = productId;
-        this.discount = discount;
+    public Product(String productId, String productName, double productPrice, DiscountStrategy discount) {
+        setProductName(productName);
+        setProductPrice(productPrice);
+        setProductId(productId);
+        setDiscount(discount);
     }
 
-    public DiscountStrategy getDiscount() {
+    public final DiscountStrategy getDiscount() {
         return discount;
     }
 
-    public String getProductName() {
+    public final void setDiscount(DiscountStrategy discount) {
+        //Validate
+        this.discount = discount;
+    }
+
+    public final String getProductName() {
         return productName;
     }
 
-    public void setProductName(String productName) {
+    public final void setProductName(String productName) {
+        //Validate
         this.productName = productName;
     }
 
-    public double getProductPrice() {
+    public final double getProductPrice() {
         return productPrice;
     }
 
-    public void setProductPrice(double productPrice) {
+    public final void setProductPrice(double productPrice) {
+        //Validate
         this.productPrice = productPrice;
     }
 
-    public String getProductId() {
+    public final String getProductId() {
         return productId;
     }
 
-    public void setProductId(String productId) {
+    public final void setProductId(String productId) {
+        //Validate
         this.productId = productId;
     }
-    
 }

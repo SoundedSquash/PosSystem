@@ -10,19 +10,20 @@ public class PercentDiscount implements DiscountStrategy {
     public PercentDiscount(double discount) {
         this.discount = discount;
     }
-    
+
     @Override
-    public double getDiscount(double price, int quantity){
+    public final double getDiscount(double price, int quantity) {
         return price * quantity * discount;
     }
 
     @Override
-    public double getDiscount() {
+    public final double getDiscount() {
         return discount;
     }
 
     @Override
-    public void setDiscount(double discount) {
+    public final void setDiscount(double discount) {
+        //Validate
         this.discount = discount;
     }
 }

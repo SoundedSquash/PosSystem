@@ -15,5 +15,5 @@ public interface DiscountStrategy {
     double getDiscount();
 
     void setDiscount(double discount);
-    
+
 }
