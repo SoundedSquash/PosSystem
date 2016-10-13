@@ -14,13 +14,13 @@ import wtb_discountstrategy.Storage.Storage;
 public class Register {
     private Receipt receipt;
 
-    public final void startNewSale(String customerId, Storage storage) {
-        receipt = new Receipt(customerId, storage);
+    public final void startNewSale(String customerId, Storage storage, Writer writer) {
+        receipt = new Receipt(customerId, storage, writer);
     }
 
-    public final void addProduct(String productId, int quantity, Storage storage, Writer writer) {
+    public final void addProduct(String productId, int quantity, Storage storage) {
         receipt.addProduct(productId, quantity, storage);
-        receipt.printItem(writer);
+        receipt.printItem();
     }
 
     public final void endSale(Writer writer) {

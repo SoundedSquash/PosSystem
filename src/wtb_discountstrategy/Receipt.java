@@ -13,13 +13,15 @@ import wtb_discountstrategy.Storage.Storage;
  */
 public class Receipt {
     private Customer customer;
+    private Writer writer;
     private LineItem[] lineItems;
 
-    public Receipt(String customerId, Storage storage) {
+    public Receipt(String customerId, Storage storage, Writer writer) {
         customer = storage.findCustomerById(customerId);
         if (customer == null){
             customer = new Customer("N/A", "N/A", "N/A");
         }
+        this.writer = writer;
         lineItems = new LineItem[0];
     }
 
@@ -38,7 +40,7 @@ public class Receipt {
         temp = null;
     }
 
-    public final void printItem(Writer writer){
+    public final void printItem(){
         writer.writeItem(customer, lineItems[lineItems.length-1]);
     }
 
