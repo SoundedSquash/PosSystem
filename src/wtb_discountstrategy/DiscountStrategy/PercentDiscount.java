@@ -26,4 +26,9 @@ public class PercentDiscount implements DiscountStrategy {
         //Validate
         this.discount = discount;
     }
+
+    @Override
+    public String getDiscountDescription() {
+        return (getDiscount() * 100) + "% discount.";
+    }
 }

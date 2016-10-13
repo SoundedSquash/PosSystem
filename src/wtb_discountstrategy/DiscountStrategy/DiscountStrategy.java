@@ -13,6 +13,8 @@ public interface DiscountStrategy {
     double getDiscount(double price, int quantity);
 
     double getDiscount();
+    
+    String getDiscountDescription();
 
     void setDiscount(double discount);
 

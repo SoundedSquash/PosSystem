@@ -25,7 +25,7 @@ public class LineItem {
     public final void setProduct(Product product) {
         if (product == null){
             //Can't find product. Give empty product to prevent nasty error.
-            product = new Product("N/A", "N/A", 0, new NoDiscount());
+            product = new Product("N/A", "ERROR", 0, new NoDiscount());
         }
         this.product = product;
     }

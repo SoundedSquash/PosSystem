@@ -43,4 +43,9 @@ public class QuantityDiscount implements DiscountStrategy {
         //Validate
         this.minQuantity = minQuantity;
     }
+
+    @Override
+    public String getDiscountDescription() {
+        return "Buy " + getMinQuantity() + ", get " + (getDiscount() * 100) + "% discount.";
+    }
 }

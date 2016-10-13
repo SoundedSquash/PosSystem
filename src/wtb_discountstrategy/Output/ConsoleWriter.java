@@ -25,11 +25,19 @@ public class ConsoleWriter implements Writer {
 
     private LineItem[] lineItems = new LineItem[0];
 
+    @Override
     public final void write(Customer customer, LineItem[] lineItems){
         String productName;
         double productPrice, productSubTotal, productDiscount, runningSubTotal = 0, runningDiscount = 0, runningTotal = 0;
         int productQuantity;
         DecimalFormat df = new DecimalFormat("$#0.00");
+        
+        // sample
+        StringBuilder sb = new StringBuilder(new SimpleDateFormat("MM/dd/yyyy hh:mm:ss a").format(new Date()));
+        sb.append("\n");
+        System.out.println("Customer: " + customer.getFirstName() + " " + customer.getLastName());
+        System.out.println();
+    
 
         //Create header
         System.out.println(new SimpleDateFormat("MM/dd/yyyy hh:mm:ss a").format(new Date()));
@@ -71,7 +79,7 @@ public class ConsoleWriter implements Writer {
 
         addToLineItems(lineItem);
 
-        if (lineItems.length == 0) {
+        if (lineItems.length == 1) {
             //Headings
             System.out.printf(TABLE_FORMAT, QTY, PRODUCT, PRICE, SUBTOTAL, DISCOUNT, FINAL);
             System.out.printf(TABLE_FORMAT, HYPHEN_5, HYPHEN_10, HYPHEN_10, HYPHEN_10, HYPHEN_10, HYPHEN_10);

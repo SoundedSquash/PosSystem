@@ -21,6 +21,7 @@ public class GuiWriter implements Writer {
 
     private LineItem[] lineItems = new LineItem[0];
 
+    @Override
     public final void write(Customer customer, LineItem[] lineItems) {
         JOptionPane jop = new JOptionPane();
 
@@ -58,6 +59,7 @@ public class GuiWriter implements Writer {
 
     }
 
+    @Override
     public final void writeItem(Customer customer, LineItem lineItem) {
         JOptionPane jop = new JOptionPane();
 
@@ -85,6 +87,7 @@ public class GuiWriter implements Writer {
             productPrice = li.getProduct().getProductPrice();
             productSubTotal = productQuantity * productPrice;
             productDiscount = li.getProduct().getDiscount().getDiscount(productPrice, productQuantity);
+        
             //Create output
             model.addRow(new Object[]{productQuantity, productName, df.format(productPrice), df.format(productSubTotal), df.format(productDiscount), df.format(productSubTotal - productDiscount)});
         }

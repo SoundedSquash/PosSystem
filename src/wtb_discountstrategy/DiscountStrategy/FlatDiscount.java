@@ -26,4 +26,9 @@ public class FlatDiscount implements DiscountStrategy {
         //Validate
         this.discount = discount;
     }
+
+    @Override
+    public String getDiscountDescription() {
+        return "$" + getDiscount() + " discount.";
+    }
 }
